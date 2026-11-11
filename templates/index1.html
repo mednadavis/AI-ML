@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Day 1 interactive learning notes: AI fundamentals, machine learning and industry use cases.">
+  <title>AI / ML Academy — Day 1: AI Fundamentals</title>
+  <link rel="stylesheet" href="../css/index1.css">
+  <script src="../js/index1.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to lesson</a>
+  <header class="topbar">
+    <a class="brand" href="index1.html" aria-label="AI ML Academy home">
+      <span class="brand-mark">A<span>I</span></span>
+      <span class="brand-copy"><strong>AI / ML</strong><small>LEARNING PATH</small></span>
+    </a>
+    <nav class="top-actions" aria-label="Course navigation">
+      <a class="day-link is-current" href="index1.html">Day 01 <span>Current</span></a>
+      <a class="day-link day-two-link" href="index2.html" aria-label="Go to Day 2">Day 02 <span>Next lesson</span></a>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">◐</button>
+    </nav>
+  </header>
+
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Lesson navigation">
+      <div class="course-label">FOUNDATIONS · DAY 01</div>
+      <div class="sidebar-heading">AI Fundamentals</div>
+      <div class="progress-card">
+        <div class="progress-line"><span>YOUR PROGRESS</span><strong id="progressText">0%</strong></div>
+        <div class="progress-track"><span id="progressBar"></span></div>
+        <small id="progressDetail">0 of 12 learning modules completed</small>
+      </div>
+      <label class="search-label" for="lessonSearch">FIND A TOPIC</label>
+      <input id="lessonSearch" class="search-input" type="search" placeholder="Search this lesson…" autocomplete="off">
+      <nav id="lessonNav" class="lesson-nav">
+        <a href="#start" class="nav-link active"><span>00</span> Start here</a>
+        <a href="#ai-basics" class="nav-link"><span>01</span> Understanding AI</a>
+        <a href="#ml-workflow" class="nav-link"><span>02</span> How machines learn</a>
+        <a href="#learning-types" class="nav-link"><span>03</span> Types of ML</a>
+        <a href="#training-inference" class="nav-link"><span>04</span> Training vs inference</a>
+        <a href="#features-labels" class="nav-link"><span>05</span> Features & labels</a>
+        <a href="#overfitting" class="nav-link"><span>06</span> Overfitting</a>
+        <a href="#evaluation" class="nav-link"><span>07</span> Model evaluation</a>
+        <a href="#industries" class="nav-link"><span>08</span> Industry use cases</a>
+        <a href="#software" class="nav-link"><span>09</span> AI in software</a>
+        <a href="#responsible-ai" class="nav-link"><span>10</span> Responsible AI</a>
+        <a href="#knowledge-check" class="nav-link"><span>11</span> Knowledge check</a>
+      </nav>
+      <div class="sidebar-foot">LEARN · EXPLORE · PRACTISE</div>
+    </aside>
+
+    <main id="main-content" class="main-content">
+      <section class="hero" id="start">
+        <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+        <div class="hero-content">
+          <div class="eyebrow"><span class="live-dot"></span> DAY 01 <span class="eyebrow-divider">/</span> BEGINNER FRIENDLY</div>
+          <h1>Understand the intelligence<br><em>behind the technology.</em></h1>
+          <p class="hero-lead">Build a strong mental model of Artificial Intelligence and Machine Learning — from the first data point to a real-world prediction.</p>
+          <div class="hero-meta"><span>◷ 60–90 min read</span><span>▤ 12 learning modules</span><span>✦ Interactive examples</span></div>
+          <a class="primary-button" href="#ai-basics">Start learning <span>↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="core-node"><span>AI</span><small>INTELLIGENCE</small></div>
+          <div class="float-node node-data">DATA <b>01</b></div>
+          <div class="float-node node-model">MODEL <b>02</b></div>
+          <div class="float-node node-insight">INSIGHT <b>03</b></div>
+          <div class="art-line line-a"></div><div class="art-line line-b"></div>
+        </div>
+      </section>
+
+      <section class="learning-strip">
+        <div><span class="strip-icon">◎</span><div><strong>Understand the landscape</strong><small>AI, ML, deep learning and GenAI</small></div></div>
+        <div><span class="strip-icon">⌁</span><div><strong>Learn the workflow</strong><small>Data → model → prediction</small></div></div>
+        <div><span class="strip-icon">▦</span><div><strong>Compare learning types</strong><small>Supervised, unsupervised, reinforcement</small></div></div>
+        <div><span class="strip-icon">↗</span><div><strong>Connect to business</strong><small>Real applications and limitations</small></div></div>
+      </section>
+
+      <section class="content-section" id="ai-basics">
+        <div class="section-kicker">MODULE 01 · THE BIG PICTURE</div>
+        <h2>First, what do we mean by <span class="gradient-text">Artificial Intelligence?</span></h2>
+        <p class="section-intro">Artificial Intelligence (AI) is the broad field of creating computer systems that perform tasks that normally require human-like capabilities — such as recognising patterns, understanding language, making recommendations, planning actions or supporting decisions.</p>
+        <div class="definition-grid">
+          <article class="definition-card featured-card"><div class="card-symbol">✧</div><h3>AI is the umbrella</h3><p>AI is the overall goal: build a system that performs an intelligent task. It may use rules, search, planning, machine learning, or a combination of these techniques.</p><span class="card-note">BROAD FIELD</span></article>
+          <article class="definition-card"><div class="card-symbol">⌘</div><h3>Not every AI learns</h3><p>A chess program can search possible moves and choose a strong one. A rule-based alarm can trigger when a temperature exceeds a limit. Neither needs to learn from examples.</p><span class="card-note">RULES · SEARCH · PLANNING</span></article>
+          <article class="definition-card"><div class="card-symbol">◉</div><h3>Not a human mind</h3><p>An AI system can produce impressive results without having human feelings, intentions or understanding. Its behaviour comes from its design, data and operating process.</p><span class="card-note">CAPABILITY ≠ CONSCIOUSNESS</span></article>
+        </div>
+        <div class="example-panel">
+          <div class="example-heading"><span class="example-tag">EVERYDAY EXAMPLE</span><span>Where AI already appears</span></div>
+          <div class="everyday-grid">
+            <div class="everyday-item"><span class="emoji">▶</span><div><strong>Streaming platforms</strong><p>Use viewing history and similarity patterns to recommend content you may enjoy.</p></div></div>
+            <div class="everyday-item"><span class="emoji">⌖</span><div><strong>Navigation apps</strong><p>Estimate arrival times using road networks, historical travel patterns and live traffic.</p></div></div>
+            <div class="everyday-item"><span class="emoji">✉</span><div><strong>Email filtering</strong><p>Identify patterns associated with spam, phishing and unwanted messages.</p></div></div>
+            <div class="everyday-item"><span class="emoji">◖</span><div><strong>Voice assistants</strong><p>Convert speech to text, interpret the request and generate or retrieve a response.</p></div></div>
+          </div>
+        </div>
+        <h3 class="subheading">The AI family: how the terms fit together</h3>
+        <p>Machine Learning is one approach within AI. Deep Learning is a specialised area of Machine Learning that uses multi-layer neural networks. Generative AI is commonly built using deep-learning models that generate new content. These terms describe related layers of a field, not four competing products.</p>
+        <div class="family-tree" role="img" aria-label="Nested relationship: AI contains machine learning, which contains deep learning, which contains generative AI">
+          <div class="tree-level tree-ai"><span class="tree-label">AI</span><small>Systems performing intelligent tasks</small>
+            <div class="tree-level tree-ml"><span class="tree-label">Machine Learning</span><small>Patterns learned from data</small>
+              <div class="tree-level tree-dl"><span class="tree-label">Deep Learning</span><small>Multi-layer neural networks</small>
+                <div class="tree-level tree-gen"><span class="tree-label">Generative AI</span><small>Creates text, images, audio, code and more</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="concept-table-wrap"><table class="concept-table"><thead><tr><th>Concept</th><th>What it means</th><th>Practical example</th></tr></thead><tbody>
+          <tr><td><b>AI</b></td><td>The broad field of intelligent computer behaviour</td><td>A system that helps a doctor review a scan</td></tr>
+          <tr><td><b>Machine Learning</b></td><td>Algorithms learn patterns from examples</td><td>Predict whether a transaction is suspicious</td></tr>
+          <tr><td><b>Deep Learning</b></td><td>ML based on layered neural networks</td><td>Recognise objects in a photograph</td></tr>
+          <tr><td><b>Generative AI</b></td><td>Models generate new content from learned patterns</td><td>Draft an email or create an image from a prompt</td></tr>
+        </tbody></table></div>
+        <div class="insight-callout"><span>✦</span><p><strong>Remember:</strong> AI is the umbrella. Machine Learning is one way to build AI. Deep Learning is one family of ML techniques. Generative AI describes systems designed to create new content.</p></div>
+      </section>
+
+      <section class="content-section" id="ml-workflow">
+        <div class="section-kicker">MODULE 02 · THE LEARNING PROCESS</div>
+        <h2>How does a machine <span class="gradient-text">learn from data?</span></h2>
+        <p class="section-intro">A machine-learning model is not manually given every possible answer. Instead, we provide relevant examples and a learning algorithm adjusts the model's internal parameters so its outputs become more useful for the task.</p>
+        <div class="workflow" aria-label="Machine learning workflow">
+          <div class="workflow-step"><span class="step-number">01</span><span class="step-icon">▤</span><b>Collect</b><small>Gather relevant examples</small></div><span class="flow-arrow">→</span>
+          <div class="workflow-step"><span class="step-number">02</span><span class="step-icon">⌕</span><b>Prepare</b><small>Clean and organise data</small></div><span class="flow-arrow">→</span>
+          <div class="workflow-step"><span class="step-number">03</span><span class="step-icon">⚙</span><b>Train</b><small>Learn patterns from examples</small></div><span class="flow-arrow">→</span>
+          <div class="workflow-step"><span class="step-number">04</span><span class="step-icon">✓</span><b>Evaluate</b><small>Test on unseen examples</small></div><span class="flow-arrow">→</span>
+          <div class="workflow-step"><span class="step-number">05</span><span class="step-icon">✧</span><b>Predict</b><small>Use on new data</small></div>
+        </div>
+        <div class="deep-dive-grid">
+          <article class="detail-card"><span class="detail-index">A / DATA</span><h3>Collect relevant examples</h3><p>Start with examples connected to the problem. If the goal is to estimate house prices, collect historical property sales. Each row should describe a property and its known sale outcome.</p><p><b>Why it matters:</b> unrelated, outdated or unrepresentative examples can teach the model misleading patterns.</p></article>
+          <article class="detail-card"><span class="detail-index">B / PREPARATION</span><h3>Make the data usable</h3><p>Real-world data often contains missing values, duplicates, inconsistent units, spelling differences and incorrect entries. Preparation makes records more consistent before training.</p><p><b>Example:</b> standardise area to square feet, handle missing bedroom counts and remove duplicate sale records.</p></article>
+          <article class="detail-card"><span class="detail-index">C / TRAINING</span><h3>Let the algorithm adjust</h3><p>The learning algorithm compares model outputs with known answers when labels are available. It calculates an error or loss and updates internal parameters to reduce that error.</p><p><b>Important:</b> the model learns statistical relationships; it does not understand the real-world cause of every relationship.</p></article>
+          <article class="detail-card"><span class="detail-index">D / EVALUATION</span><h3>Test beyond the practice set</h3><p>Evaluate the model using examples it did not train on. This checks whether it learned patterns that generalise rather than simply performing well on familiar records.</p><p><b>Why it matters:</b> a model that only works on its training data is not ready for real use.</p></article>
+        </div>
+        <div class="scenario-box">
+          <div><span class="example-tag">FOLLOW THE EXAMPLE</span><h3>Predicting a house price</h3><p>Imagine a property website wants to estimate a likely selling price for a new listing.</p></div>
+          <div class="scenario-flow"><div><b>Past sales</b><small>Area, location, age, bedrooms + sale price</small></div><span>→</span><div><b>Learning algorithm</b><small>Finds relationships in historical examples</small></div><span>→</span><div><b>Trained model</b><small>Learned parameters</small></div><span>→</span><div class="scenario-output"><b>₹72 lakh</b><small>Illustrative estimate for a new home</small></div></div>
+          <p class="scenario-footnote">The result is an estimate, not a promise of the final selling price. Market conditions, property condition and information missing from the data can change the outcome.</p>
+        </div>
+        <div class="interactive-lab">
+          <div class="lab-heading"><span class="lab-icon">⌁</span><div><span class="example-tag">TRY IT YOURSELF</span><h3>House-price prediction playground</h3></div></div>
+          <p>Change the property details and see how a simple illustrative scoring rule changes the estimate. This is a teaching simulation, not a trained pricing model.</p>
+          <div class="playground-grid">
+            <label>Area <output id="areaValue">1,200 sq ft</output><input id="areaInput" type="range" min="500" max="3000" step="100" value="1200"></label>
+            <label>Bedrooms <output id="bedValue">2 bedrooms</output><input id="bedInput" type="range" min="1" max="5" value="2"></label>
+            <label>Property age <output id="ageValue">10 years</output><input id="ageInput" type="range" min="0" max="40" step="1" value="10"></label>
+            <label>Location score <output id="locationValue">7 / 10</output><input id="locationInput" type="range" min="1" max="10" value="7"></label>
+          </div>
+          <div class="prediction-result"><div><small>ILLUSTRATIVE ESTIMATED PRICE</small><strong id="priceEstimate">₹64.0 lakh</strong><span id="priceExplanation">Based on the selected property characteristics</span></div><div class="result-spark">↗</div></div>
+        </div>
+      </section>
+
+      <section class="content-section" id="learning-types">
+        <div class="section-kicker">MODULE 03 · THREE LEARNING APPROACHES</div>
+        <h2>Three ways a model can <span class="gradient-text">learn.</span></h2>
+        <p class="section-intro">The learning approach depends on what information is available and what the system is expected to achieve. The most important distinction is whether examples come with known answers, whether the system must discover structure, or whether it learns through feedback from actions.</p>
+        <div class="tabs" role="tablist" aria-label="Machine learning approaches">
+          <button class="tab-button active" role="tab" aria-selected="true" data-tab="supervised">01 · Supervised</button>
+          <button class="tab-button" role="tab" aria-selected="false" data-tab="unsupervised">02 · Unsupervised</button>
+          <button class="tab-button" role="tab" aria-selected="false" data-tab="reinforcement">03 · Reinforcement</button>
+        </div>
+        <div class="tab-panel active" id="tab-supervised" role="tabpanel">
+          <div class="tab-copy"><span class="pill pill-blue">KNOWN ANSWERS · LABELLED DATA</span><h3>Supervised learning — learning with an answer key</h3><p>Each training example contains input information and a known correct answer, called a <b>label</b>. The model makes a prediction, compares it with the answer key and adjusts to reduce the difference. Once trained, it can predict labels or values for new examples.</p><p><b>Example:</b> give a model thousands of emails marked “spam” or “not spam”. It learns patterns associated with each category and can classify a new email.</p><div class="mini-flow"><span>Inputs + correct labels</span><b>→</b><span>Learning algorithm</span><b>→</b><span>Predict for new input</span></div></div>
+          <div class="tab-visual supervised-visual"><div class="data-stack"><span>EMAIL 001 <b>SPAM</b></span><span>EMAIL 002 <b>NOT SPAM</b></span><span>EMAIL 003 <b>SPAM</b></span><span>EMAIL 004 <b>NOT SPAM</b></span></div><div class="visual-arrow">→</div><div class="model-chip">MODEL<br><small>learns patterns</small></div><div class="visual-arrow">→</div><div class="result-chip">NEW EMAIL<br><b>SPAM?</b></div></div>
+        </div>
+        <div class="tab-panel" id="tab-unsupervised" role="tabpanel" hidden>
+          <div class="tab-copy"><span class="pill pill-purple">NO KNOWN ANSWERS · UNLABELLED DATA</span><h3>Unsupervised learning — discovering hidden structure</h3><p>The examples do not come with a correct target answer. The algorithm explores similarities, differences or structure in the data. It may discover clusters of similar customers or represent complex data with fewer dimensions.</p><p><b>Example:</b> a retailer groups shoppers using purchase frequency, average spend and product preferences. A human analyst then interprets and names the groups.</p><div class="mini-flow"><span>Unlabelled data</span><b>→</b><span>Find similarities</span><b>→</b><span>Groups / structure</span></div></div>
+          <div class="tab-visual cluster-visual"><div class="cluster"><i></i><i></i><i></i><i></i><i></i><i></i><b>GROUP A</b></div><div class="cluster cluster-two"><i></i><i></i><i></i><i></i><i></i><b>GROUP B</b></div><div class="cluster cluster-three"><i></i><i></i><i></i><i></i><b>GROUP C</b></div><div class="cluster-caption">Similar records are placed closer together</div></div>
+        </div>
+        <div class="tab-panel" id="tab-reinforcement" role="tabpanel" hidden>
+          <div class="tab-copy"><span class="pill pill-orange">ACTIONS · FEEDBACK · REWARDS</span><h3>Reinforcement learning — learning through consequences</h3><p>An <b>agent</b> interacts with an <b>environment</b>, takes an <b>action</b> and receives a <b>reward</b> or penalty. Over many interactions, it learns a <b>policy</b> — a strategy for choosing actions that aims to achieve a goal and maximise long-term reward.</p><p><b>Example:</b> a delivery robot learns a route through a simulated building. Reaching the destination earns a reward; hitting an obstacle receives a penalty. Real deployments require strict safety boundaries.</p><div class="mini-flow"><span>Observe</span><b>→</b><span>Take action</span><b>→</b><span>Receive feedback</span><b>↺</b></div></div>
+          <div class="tab-visual robot-visual"><div class="robot-grid"><span>⌂</span><span>·</span><span>·</span><span>▧</span><span>·</span><span>▣</span><span>·</span><span>·</span><span>⌖</span></div><div class="robot-caption"><b>AGENT: DELIVERY ROBOT</b><small>Goal: reach destination safely</small><span>+ reward for reaching goal</span><span>− penalty for collision</span></div></div>
+        </div>
+        <div class="concept-table-wrap"><table class="concept-table"><thead><tr><th>Approach</th><th>What the data provides</th><th>Typical task</th><th>Example</th></tr></thead><tbody>
+          <tr><td><b>Supervised</b></td><td>Inputs with known answers</td><td>Classification / regression</td><td>Spam detection, house prices</td></tr>
+          <tr><td><b>Unsupervised</b></td><td>Inputs without target labels</td><td>Clustering / dimensionality reduction</td><td>Customer segments</td></tr>
+          <tr><td><b>Reinforcement</b></td><td>Actions and reward feedback</td><td>Learning a strategy</td><td>Robot navigation, game agent</td></tr>
+        </tbody></table></div>
+        <h3 class="subheading">Two important supervised-learning tasks</h3>
+        <div class="two-column-cards">
+          <article class="detail-card"><span class="pill pill-blue">CLASSIFICATION</span><h3>Predict a category</h3><p>The output belongs to a class or label. A fraud model might return “legitimate”, “needs review” or “potential fraud”. A support-ticket model might classify a ticket as network, access or software related.</p><div class="output-demo"><span>Input transaction</span><b>→</b><strong class="class-output">POTENTIAL FRAUD</strong></div><p><b>Ask yourself:</b> Is the answer a category? Then it is classification.</p></article>
+          <article class="detail-card"><span class="pill pill-green">REGRESSION</span><h3>Predict a numerical value</h3><p>The output is a quantity on a numerical scale. Examples include estimated house price, next month's sales, delivery time in minutes or expected energy consumption.</p><div class="output-demo"><span>Input property</span><b>→</b><strong class="number-output">₹72 LAKH</strong></div><p><b>Ask yourself:</b> Is the answer a number? Then it is regression.</p></article>
+        </div>
+        <div class="interactive-lab quiz-lab">
+          <div class="lab-heading"><span class="lab-icon">?</span><div><span class="example-tag">QUICK CLASSIFIER</span><h3>Classification or regression?</h3></div></div>
+          <p>Choose the right task for each business question. Select an answer to get instant feedback.</p>
+          <div class="question-card" data-answer="classification"><b>01</b><p>Will this customer leave the service next month?</p><div class="answer-options"><button data-choice="classification">Classification</button><button data-choice="regression">Regression</button></div><small class="feedback" aria-live="polite"></small></div>
+          <div class="question-card" data-answer="regression"><b>02</b><p>How many days will a delivery take?</p><div class="answer-options"><button data-choice="classification">Classification</button><button data-choice="regression">Regression</button></div><small class="feedback" aria-live="polite"></small></div>
+          <div class="question-card" data-answer="classification"><b>03</b><p>Is this incoming email spam or legitimate?</p><div class="answer-options"><button data-choice="classification">Classification</button><button data-choice="regression">Regression</button></div><small class="feedback" aria-live="polite"></small></div>
+        </div>
+        <div class="subtopic-card"><h3>Clustering and dimensionality reduction</h3><div class="subtopic-columns"><div><b>Clustering</b><p>Groups records that are similar according to selected features. A retailer might discover frequent high-spend shoppers, occasional shoppers and discount-focused shoppers. The algorithm creates groups; people interpret what those groups mean.</p></div><div><b>Dimensionality reduction</b><p>Represents data using fewer variables or dimensions while preserving important structure as much as possible. For example, hundreds of customer behaviour measures may be compressed into two dimensions for visual exploration. It simplifies analysis; it does not automatically improve decisions.</p></div></div></div>
+      </section>
+
+      <section class="content-section" id="training-inference">
+        <div class="section-kicker">MODULE 04 · MODEL LIFECYCLE</div>
+        <h2>Training and inference: <span class="gradient-text">learn first, apply later.</span></h2>
+        <p class="section-intro">Training and inference are two different phases in a model's lifecycle. Understanding this distinction helps explain how a model is developed and how it is used inside a real application.</p>
+        <div class="phase-comparison">
+          <article class="phase-card"><div class="phase-top"><span class="phase-number">PHASE 01</span><span class="pill pill-purple">LEARNING</span></div><h3>Training</h3><p>The model is exposed to historical examples. A learning algorithm adjusts its parameters to reduce errors and capture useful patterns in the training data.</p><div class="phase-diagram"><div>Historical<br>examples</div><b>→</b><div>Learning<br>algorithm</div><b>→</b><div class="phase-result">Trained<br>model</div></div><small>Happens during model development or scheduled retraining.</small></article>
+          <article class="phase-card"><div class="phase-top"><span class="phase-number">PHASE 02</span><span class="pill pill-green">USING THE MODEL</span></div><h3>Inference</h3><p>The trained model receives new input and produces an output using the patterns represented by its learned parameters. It is not necessarily learning from that individual prediction.</p><div class="phase-diagram"><div>New<br>input</div><b>→</b><div>Trained<br>model</div><b>→</b><div class="phase-result">Prediction</div></div><small>Happens when an application requests a prediction.</small></article>
+        </div>
+        <div class="analogy-band"><span class="analogy-icon">✎</span><p><b>Student analogy:</b> Training is like studying many solved examples and learning the concepts. Inference is like answering a new exam question using what you learned. You do not need to study the entire subject again for every question.</p></div>
+        <div class="example-panel"><div class="example-heading"><span class="example-tag">REAL-WORLD FLOW</span><span>Loan risk assessment</span></div><div class="horizontal-flow"><div><b>Historical applications</b><small>Past applications and outcomes</small></div><span>→</span><div><b>Training</b><small>Learn patterns associated with outcomes</small></div><span>→</span><div><b>New application</b><small>Applicant details arrive</small></div><span>→</span><div><b>Inference</b><small>Risk estimate is produced</small></div></div><p class="scenario-footnote">A risk estimate should support a governed review process, not become an unquestioned lending decision.</p></div>
+      </section>
+
+      <section class="content-section" id="features-labels">
+        <div class="section-kicker">MODULE 05 · THE DATA VOCABULARY</div>
+        <h2>Features and labels: <span class="gradient-text">inputs versus answers.</span></h2>
+        <p class="section-intro">In supervised learning, the model needs information to learn from and a target answer to learn to predict. These have different names: features and labels.</p>
+        <div class="feature-label-visual">
+          <div class="feature-side"><span class="pill pill-blue">FEATURES = INPUTS</span><h3>What the model can use</h3><div class="feature-chips"><span>Area: 1,200 sq ft</span><span>Location: Hyderabad</span><span>Bedrooms: 2</span><span>Age: 10 years</span></div><small>Descriptive information about each example</small></div>
+          <div class="big-arrow">→</div><div class="model-circle">ML<br>MODEL</div><div class="big-arrow">→</div>
+          <div class="label-side"><span class="pill pill-green">LABEL = TARGET</span><h3>What the model learns to predict</h3><div class="label-result">₹72 lakh</div><small>The known sale price during training</small></div>
+        </div>
+        <div class="detail-card"><h3>One row of a training dataset</h3><div class="concept-table-wrap"><table class="concept-table"><thead><tr><th>Area</th><th>Location</th><th>Bedrooms</th><th>Age</th><th>Sale price (label)</th></tr></thead><tbody><tr><td>1,200 sq ft</td><td>Hyderabad</td><td>2</td><td>10 years</td><td><b>₹72 lakh</b></td></tr><tr><td>1,500 sq ft</td><td>Pune</td><td>3</td><td>5 years</td><td><b>₹95 lakh</b></td></tr><tr><td>900 sq ft</td><td>Chennai</td><td>2</td><td>15 years</td><td><b>₹54 lakh</b></td></tr></tbody></table></div><p class="table-caption">The rows above are illustrative. During training, the model learns the relationship between the feature columns and the known sale-price label.</p></div>
+        <div class="insight-callout"><span>✦</span><p><strong>Another example — spam detection:</strong> features may include words in the email, sender information and link patterns. The label is “spam” or “not spam”. The model uses the features to predict the label for a new email.</p></div>
+      </section>
+
+      <section class="content-section" id="overfitting">
+        <div class="section-kicker">MODULE 06 · GENERALISATION</div>
+        <h2>Overfitting: when a model <span class="gradient-text">memorises instead of learning.</span></h2>
+        <p class="section-intro">A model is useful when it performs well on new examples, not just the examples it has already seen. Overfitting happens when a model learns noise, accidental details or overly specific patterns in its training data.</p>
+        <div class="overfit-visual">
+          <div class="fit-card"><span class="pill pill-green">GOOD GENERALISATION</span><div class="scatter-plot good-plot"><svg viewBox="0 0 300 150" role="img" aria-label="Illustrative data points with a smooth trend line"><path d="M20 12V130H285" class="axis"/><path d="M28 112 C75 96 105 85 145 70 S220 38 275 22" class="trend"/><g class="dots"><circle cx="40" cy="108" r="4"/><circle cx="58" cy="94" r="4"/><circle cx="75" cy="105" r="4"/><circle cx="92" cy="84" r="4"/><circle cx="112" cy="92" r="4"/><circle cx="132" cy="67" r="4"/><circle cx="152" cy="78" r="4"/><circle cx="174" cy="55" r="4"/><circle cx="194" cy="61" r="4"/><circle cx="218" cy="37" r="4"/><circle cx="238" cy="45" r="4"/><circle cx="263" cy="25" r="4"/></g></svg></div><h3>Learns the overall pattern</h3><p>A reasonably simple relationship captures the signal and works on examples it has not seen.</p></div>
+          <div class="fit-card"><span class="pill pill-orange">OVERFITTING</span><div class="scatter-plot bad-plot"><svg viewBox="0 0 300 150" role="img" aria-label="Illustrative noisy curve that follows individual training points"><path d="M20 12V130H285" class="axis"/><path d="M28 112 Q42 108 58 94 T75 105 T92 84 T112 92 T132 67 T152 78 T174 55 T194 61 T218 37 T238 45 T263 25" class="overfit-line"/><g class="dots"><circle cx="40" cy="108" r="4"/><circle cx="58" cy="94" r="4"/><circle cx="75" cy="105" r="4"/><circle cx="92" cy="84" r="4"/><circle cx="112" cy="92" r="4"/><circle cx="132" cy="67" r="4"/><circle cx="152" cy="78" r="4"/><circle cx="174" cy="55" r="4"/><circle cx="194" cy="61" r="4"/><circle cx="218" cy="37" r="4"/><circle cx="238" cy="45" r="4"/><circle cx="263" cy="25" r="4"/></g></svg></div><h3>Fits the training details too closely</h3><p>The model follows noise in the training set and may struggle when new data differs slightly.</p></div>
+        </div>
+        <div class="analogy-band"><span class="analogy-icon">▤</span><p><b>Exam analogy:</b> memorising the exact answers to a practice test may produce a perfect practice score. If the exam changes the questions, memorisation fails. Understanding the concepts is what helps you handle new questions.</p></div>
+        <h3 class="subheading">How do we reduce overfitting?</h3>
+        <div class="prevention-grid"><div><b>01 · Separate the data</b><p>Use training data to learn and separate validation/test data to check performance on unseen examples.</p></div><div><b>02 · Control complexity</b><p>Use a model that is appropriate for the amount and complexity of the data; apply regularisation where suitable.</p></div><div><b>03 · Improve coverage</b><p>Collect representative, reliable examples so the model sees the range of situations it must handle.</p></div></div>
+        <div class="insight-callout"><span>✦</span><p><strong>Key idea — generalisation:</strong> a good model learns relationships that remain useful beyond its training examples. Training performance alone is not enough.</p></div>
+      </section>
+
+      <section class="content-section" id="evaluation">
+        <div class="section-kicker">MODULE 07 · MEASURING QUALITY</div>
+        <h2>How do we know whether a model is <span class="gradient-text">good?</span></h2>
+        <p class="section-intro">Evaluation measures how well a model performs on data that was not used to train it. The right metric depends on the task and on the cost of different mistakes.</p>
+        <div class="metric-grid">
+          <article><span class="metric-symbol">%</span><h3>Accuracy</h3><p>Of all predictions, what proportion were correct? Useful in many settings, but can be misleading when one class is much more common than another.</p></article>
+          <article><span class="metric-symbol">◎</span><h3>Precision</h3><p>Of all cases the model predicted as positive, how many were truly positive? High precision means fewer false alarms among flagged cases.</p></article>
+          <article><span class="metric-symbol">↗</span><h3>Recall</h3><p>Of all actual positive cases, how many did the model successfully find? High recall means fewer missed positive cases.</p></article>
+          <article><span class="metric-symbol">↔</span><h3>MAE / RMSE</h3><p>For numerical predictions, how far are predictions from actual values? RMSE penalises larger errors more strongly than MAE.</p></article>
+        </div>
+        <div class="worked-example"><div class="worked-heading"><span class="example-tag">WORKED EXAMPLE 01</span><h3>Numerical prediction — house prices</h3></div><p>Suppose actual prices are ₹70 lakh, ₹80 lakh and ₹90 lakh. The model predicts ₹72 lakh, ₹75 lakh and ₹95 lakh.</p><div class="concept-table-wrap"><table class="concept-table"><thead><tr><th>Actual</th><th>Predicted</th><th>Absolute error</th><th>Squared error</th></tr></thead><tbody><tr><td>70</td><td>72</td><td>2</td><td>4</td></tr><tr><td>80</td><td>75</td><td>5</td><td>25</td></tr><tr><td>90</td><td>95</td><td>5</td><td>25</td></tr></tbody></table></div><div class="formula-grid"><div><small>MEAN ABSOLUTE ERROR</small><strong>(2 + 5 + 5) ÷ 3 = 4</strong><p>Average absolute error = ₹4 lakh</p></div><div><small>ROOT MEAN SQUARED ERROR</small><strong>√((4 + 25 + 25) ÷ 3) ≈ 4.24</strong><p>RMSE ≈ ₹4.24 lakh</p></div></div><p class="table-caption">The values in the table are in lakh rupees. MAE is easy to interpret; RMSE gives larger errors more influence.</p></div>
+        <div class="worked-example fraud-example"><div class="worked-heading"><span class="example-tag">WORKED EXAMPLE 02</span><h3>Why accuracy can be misleading — fraud detection</h3></div><p>A bank reviews 1,000 transactions. Only 10 are fraudulent. A model that labels every transaction “not fraud” achieves 99% accuracy — but catches none of the fraud.</p><div class="confusion-grid"><div class="confusion-stat"><small>TRUE POSITIVES</small><strong>6</strong><span>Fraud correctly flagged</span></div><div class="confusion-stat"><small>FALSE POSITIVES</small><strong>2</strong><span>Legitimate flagged as fraud</span></div><div class="confusion-stat"><small>FALSE NEGATIVES</small><strong>4</strong><span>Fraud that was missed</span></div><div class="confusion-stat"><small>TRUE NEGATIVES</small><strong>988</strong><span>Legitimate correctly cleared</span></div></div><div class="formula-grid three"><div><small>PRECISION</small><strong>6 ÷ 8 = 75%</strong><p>6 of 8 flagged were fraud</p></div><div><small>RECALL</small><strong>6 ÷ 10 = 60%</strong><p>6 of 10 fraud cases found</p></div><div><small>ACCURACY</small><strong>994 ÷ 1000 = 99.4%</strong><p>994 predictions correct</p></div></div><p class="scenario-footnote">For fraud detection, missing fraud can be costly, so recall matters. Too many false alarms also create operational cost, so precision matters. The right balance depends on the business risk.</p></div>
+      </section>
+
+      <section class="content-section" id="industries">
+        <div class="section-kicker">MODULE 08 · BUSINESS VALUE</div>
+        <h2>Where does AI create value <span class="gradient-text">across industries?</span></h2>
+        <p class="section-intro">AI becomes useful when it helps solve a meaningful problem: reduce repetitive work, identify risks earlier, improve planning, make information easier to use or help people make better-informed decisions.</p>
+        <div class="industry-grid">
+          <article class="industry-card"><div class="industry-icon">▤</div><span class="industry-label">BFSI</span><h3>Banking & insurance</h3><p>Detect suspicious transactions, support credit-risk analysis, process documents and assist customer-service teams.</p><div class="industry-example"><b>Example</b> A transaction is flagged for review because its amount, location and timing differ from a customer's usual activity.</div></article>
+          <article class="industry-card"><div class="industry-icon">▧</div><span class="industry-label">RETAIL</span><h3>Retail & e-commerce</h3><p>Recommend products, forecast demand, segment customers and help plan stock levels.</p><div class="industry-example"><b>Example</b> Demand forecasts help a store prepare inventory before a seasonal increase in sales.</div></article>
+          <article class="industry-card"><div class="industry-icon">✚</div><span class="industry-label">HEALTHCARE</span><h3>Healthcare</h3><p>Support medical-image review, forecast appointment demand and assist with clinical documentation.</p><div class="industry-example"><b>Example</b> An image-analysis tool highlights an area that a qualified clinician should review.</div></article>
+          <article class="industry-card"><div class="industry-icon">⚙</div><span class="industry-label">MANUFACTURING</span><h3>Manufacturing</h3><p>Predict equipment maintenance needs, inspect product quality and support production planning.</p><div class="industry-example"><b>Example</b> Sensor patterns in vibration and temperature indicate that a machine may need maintenance soon.</div></article>
+        </div>
+        <div class="deep-dive-banner"><div><span class="example-tag">DEEPER EXAMPLE</span><h3>Predictive maintenance: fix before failure</h3><p>Traditional maintenance may happen on a fixed schedule or after a breakdown. Predictive maintenance analyses equipment data to estimate when a problem may occur, allowing teams to investigate and service equipment earlier.</p></div><div class="maintenance-flow"><div>Sensor readings<small>Vibration · temperature</small></div><span>→</span><div>ML model<small>Recognises warning patterns</small></div><span>→</span><div>Maintenance alert<small>Inspect before failure</small></div></div></div>
+      </section>
+
+      <section class="content-section" id="software">
+        <div class="section-kicker">MODULE 09 · YOUR WORKING WORLD</div>
+        <h2>AI in <span class="gradient-text">software engineering.</span></h2>
+        <p class="section-intro">AI is becoming an assistant across the software development lifecycle. It can speed up repetitive tasks and help engineers explore unfamiliar information, but the engineer remains responsible for correctness, security and maintainability.</p>
+        <div class="software-lifecycle">
+          <div><span>01</span><h3>Development</h3><p>Suggest code, explain unfamiliar functions, draft documentation and help explore implementation options.</p></div>
+          <div><span>02</span><h3>Quality engineering</h3><p>Suggest test cases, classify defects, analyse failed test runs and identify areas that may need more coverage.</p></div>
+          <div><span>03</span><h3>IT operations</h3><p>Summarise logs, group related incidents, identify unusual patterns and support root-cause investigation.</p></div>
+        </div>
+        <div class="code-example"><div class="code-top"><span>ILLUSTRATIVE DEVELOPMENT WORKFLOW</span><span class="code-dots">● ● ●</span></div><div class="code-body"><div class="code-line"><span>01</span><code>Developer describes a requirement</code></div><div class="code-line"><span>02</span><code>AI suggests an implementation and test cases</code></div><div class="code-line"><span>03</span><code>Developer reviews logic, edge cases and security</code></div><div class="code-line"><span>04</span><code>Tests run; code is corrected and validated</code></div><div class="code-line success-line"><span>05</span><code>Reviewed code is committed and maintained</code></div></div></div>
+        <div class="insight-callout"><span>✦</span><p><strong>Professional mindset:</strong> AI-generated code is a proposal, not proof of correctness. Review it, test it, understand it and follow your organisation's security and data-handling policies.</p></div>
+      </section>
+
+      <section class="content-section" id="responsible-ai">
+        <div class="section-kicker">MODULE 10 · RESPONSIBLE USE</div>
+        <h2>Use AI thoughtfully: <span class="gradient-text">strengths and limits.</span></h2>
+        <p class="section-intro">AI can process large amounts of information and reveal useful patterns, but its output is only as dependable as the data, design, evaluation and operating controls behind it.</p>
+        <div class="strength-risk-grid">
+          <article class="strength-card"><span class="pill pill-green">WHERE AI HELPS</span><h3>Strengths</h3><ul><li>Finds patterns across large datasets.</li><li>Automates repetitive, well-defined work.</li><li>Can help teams make faster, more consistent assessments.</li><li>Can surface signals that may be difficult to notice manually.</li></ul></article>
+          <article class="risk-card"><span class="pill pill-orange">WHAT TO WATCH</span><h3>Risks and limitations</h3><ul><li>Predictions can be wrong or uncertain.</li><li>Biased or incomplete data can create unfair outcomes.</li><li>Generative AI can produce convincing but false information.</li><li>Sensitive information may be mishandled if policy is ignored.</li></ul></article>
+        </div>
+        <div class="human-review"><div class="human-icon">人</div><div><span class="example-tag">HUMAN OVERSIGHT</span><h3>Keep people accountable for high-impact decisions</h3><p>Decisions involving loans, medical care, hiring, safety or people's rights need appropriate human review, clear accountability, testing and governance. AI should support judgement, not silently replace responsibility.</p></div></div>
+        <div class="principles-row"><div><b>01</b><span>Validate outputs</span><small>Check important claims and predictions.</small></div><div><b>02</b><span>Check data quality</span><small>Look for gaps, bias and outdated records.</small></div><div><b>03</b><span>Protect information</span><small>Follow privacy and security policy.</small></div><div><b>04</b><span>Keep oversight</span><small>Define who reviews and owns decisions.</small></div></div>
+      </section>
+
+      <section class="content-section final-section" id="knowledge-check">
+        <div class="section-kicker">MODULE 11 · TEST YOUR UNDERSTANDING</div>
+        <h2>Knowledge check: <span class="gradient-text">make it stick.</span></h2>
+        <p class="section-intro">Try these questions without looking back at the notes. Choose an answer and submit to see your score and explanations.</p>
+        <div id="quiz" class="quiz-container">
+          <div class="quiz-top"><span>DAY 01 · QUICK ASSESSMENT</span><span id="quizCounter">5 QUESTIONS</span></div>
+          <div id="quizQuestions">
+            <fieldset class="quiz-question"><legend><span>01</span> A bank model predicts whether a transaction is fraudulent or legitimate. Which task is this?</legend><label><input type="radio" name="q1" value="a"><span>Regression</span></label><label><input type="radio" name="q1" value="b"><span>Classification</span></label><label><input type="radio" name="q1" value="c"><span>Clustering</span></label><div class="quiz-explanation" hidden>Correct: Classification. The output is a category such as fraudulent or legitimate.</div></fieldset>
+            <fieldset class="quiz-question"><legend><span>02</span> A retailer groups customers without predefined segment labels. Which approach is most suitable?</legend><label><input type="radio" name="q2" value="a"><span>Supervised learning</span></label><label><input type="radio" name="q2" value="b"><span>Reinforcement learning</span></label><label><input type="radio" name="q2" value="c"><span>Unsupervised learning</span></label><div class="quiz-explanation" hidden>Correct: Unsupervised learning. The system explores similarities and discovers groups without known target labels.</div></fieldset>
+            <fieldset class="quiz-question"><legend><span>03</span> What is the difference between training and inference?</legend><label><input type="radio" name="q3" value="a"><span>Training learns from examples; inference uses the trained model on new input.</span></label><label><input type="radio" name="q3" value="b"><span>They are two names for the same activity.</span></label><label><input type="radio" name="q3" value="c"><span>Inference is when the model is first created.</span></label><div class="quiz-explanation" hidden>Correct: Training learns patterns by adjusting parameters. Inference applies the trained model to new input to produce an output.</div></fieldset>
+            <fieldset class="quiz-question"><legend><span>04</span> In a house-price model, which option is a label?</legend><label><input type="radio" name="q4" value="a"><span>Number of bedrooms</span></label><label><input type="radio" name="q4" value="b"><span>Property location</span></label><label><input type="radio" name="q4" value="c"><span>Actual sale price</span></label><div class="quiz-explanation" hidden>Correct: Actual sale price. Area, location and bedrooms are features; the known sale price is the target label.</div></fieldset>
+            <fieldset class="quiz-question"><legend><span>05</span> Why can a fraud model with 99% accuracy still be unsuitable?</legend><label><input type="radio" name="q5" value="a"><span>Accuracy is never useful.</span></label><label><input type="radio" name="q5" value="b"><span>Fraud may be rare, so the model can ignore every fraud case and still look accurate.</span></label><label><input type="radio" name="q5" value="c"><span>Fraud detection is a regression task.</span></label><div class="quiz-explanation" hidden>Correct: Fraud is often a minority class. A model can achieve high accuracy while catching no fraud, so precision and recall are important too.</div></fieldset>
+          </div>
+          <div class="quiz-actions"><button class="primary-button" id="submitQuiz" type="button">Submit answers <span>→</span></button><button class="text-button" id="resetQuiz" type="button">Reset quiz</button></div>
+          <div id="quizResult" class="quiz-result" aria-live="polite" hidden></div>
+        </div>
+        <div class="recap-panel"><span class="example-tag">DAY 01 · THE ESSENTIALS</span><h3>What you should be able to explain now</h3><div class="recap-list"><p><b>01</b> AI is the broad field; ML learns patterns from data; deep learning uses neural networks; GenAI creates content.</p><p><b>02</b> The ML lifecycle moves from collecting and preparing data to training, evaluation and prediction.</p><p><b>03</b> Supervised learning uses known answers; unsupervised learning discovers structure; reinforcement learning uses reward feedback.</p><p><b>04</b> Training learns; inference applies. Features are inputs; labels are target answers.</p><p><b>05</b> A useful model generalises to unseen data. Choose evaluation metrics based on the cost of mistakes.</p><p><b>06</b> AI creates value across industries, but important outputs need validation, governance and human oversight.</p></div></div>
+      </section>
+
+      <footer class="lesson-footer"><div><span class="footer-mark">AI</span><div><b>Day 01 complete?</b><small>Strong foundations make advanced topics easier.</small></div></div><a class="primary-button" href="index2.html">Continue to Day 02 <span>→</span></a></footer>
+    </main>
+  </div>
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑</button>
+</body>
+</html>
