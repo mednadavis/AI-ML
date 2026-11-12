@@ -15,9 +15,40 @@
       <span class="brand-mark">A<span>I</span></span>
       <span class="brand-copy"><strong>AI / ML</strong><small>LEARNING PATH</small></span>
     </a>
-    <nav class="top-actions" aria-label="Course navigation">
-      <a class="day-link is-current" href="index1.html">Day 01 <span>Current</span></a>
-      <a class="day-link day-two-link" href="index2.html" aria-label="Go to Day 2">Day 02 <span>Next lesson</span></a>
+    <nav class="top-actions" aria-label="Course day navigation">
+      <div class="day-selector-label">COURSE DAYS</div>
+      <div class="day-selector" aria-label="Navigate to a day">
+      <a class="day-chip is-current is-available" href="index1.html" aria-current=page title="Day 1">D01</a>
+      <a class="day-chip  is-available" href="index2.html"  title="Day 2">D02</a>
+      <a class="day-chip  is-upcoming" href="index3.html"  title="Day 3">D03</a>
+      <a class="day-chip  is-upcoming" href="index4.html"  title="Day 4">D04</a>
+      <a class="day-chip  is-upcoming" href="index5.html"  title="Day 5">D05</a>
+      <a class="day-chip  is-upcoming" href="index6.html"  title="Day 6">D06</a>
+      <a class="day-chip  is-upcoming" href="index7.html"  title="Day 7">D07</a>
+      <a class="day-chip  is-upcoming" href="index8.html"  title="Day 8">D08</a>
+      <a class="day-chip  is-upcoming" href="index9.html"  title="Day 9">D09</a>
+      <a class="day-chip  is-upcoming" href="index10.html"  title="Day 10">D10</a>
+      <a class="day-chip  is-upcoming" href="index11.html"  title="Day 11">D11</a>
+      <a class="day-chip  is-upcoming" href="index12.html"  title="Day 12">D12</a>
+      <a class="day-chip  is-upcoming" href="index13.html"  title="Day 13">D13</a>
+      <a class="day-chip  is-upcoming" href="index14.html"  title="Day 14">D14</a>
+      <a class="day-chip  is-upcoming" href="index15.html"  title="Day 15">D15</a>
+      <a class="day-chip  is-upcoming" href="index16.html"  title="Day 16">D16</a>
+      <a class="day-chip  is-upcoming" href="index17.html"  title="Day 17">D17</a>
+      <a class="day-chip  is-upcoming" href="index18.html"  title="Day 18">D18</a>
+      <a class="day-chip  is-upcoming" href="index19.html"  title="Day 19">D19</a>
+      <a class="day-chip  is-upcoming" href="index20.html"  title="Day 20">D20</a>
+      <a class="day-chip  is-upcoming" href="index21.html"  title="Day 21">D21</a>
+      <a class="day-chip  is-upcoming" href="index22.html"  title="Day 22">D22</a>
+      <a class="day-chip  is-upcoming" href="index23.html"  title="Day 23">D23</a>
+      <a class="day-chip  is-upcoming" href="index24.html"  title="Day 24">D24</a>
+      <a class="day-chip  is-upcoming" href="index25.html"  title="Day 25">D25</a>
+      <a class="day-chip  is-upcoming" href="index26.html"  title="Day 26">D26</a>
+      <a class="day-chip  is-upcoming" href="index27.html"  title="Day 27">D27</a>
+      <a class="day-chip  is-upcoming" href="index28.html"  title="Day 28">D28</a>
+      <a class="day-chip  is-upcoming" href="index29.html"  title="Day 29">D29</a>
+      <a class="day-chip  is-upcoming" href="index30.html"  title="Day 30">D30</a>
+      </div>
       <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">◐</button>
     </nav>
   </header>
@@ -280,6 +311,21 @@
         </div>
         <div class="human-review"><div class="human-icon">人</div><div><span class="example-tag">HUMAN OVERSIGHT</span><h3>Keep people accountable for high-impact decisions</h3><p>Decisions involving loans, medical care, hiring, safety or people's rights need appropriate human review, clear accountability, testing and governance. AI should support judgement, not silently replace responsibility.</p></div></div>
         <div class="principles-row"><div><b>01</b><span>Validate outputs</span><small>Check important claims and predictions.</small></div><div><b>02</b><span>Check data quality</span><small>Look for gaps, bias and outdated records.</small></div><div><b>03</b><span>Protect information</span><small>Follow privacy and security policy.</small></div><div><b>04</b><span>Keep oversight</span><small>Define who reviews and owns decisions.</small></div></div>
+      </section>
+
+      <section class="content-section" id="model-thinking-deepdive">
+        <div class="section-kicker">BONUS DEEP DIVE · THINK LIKE AN ML PRACTITIONER</div>
+        <h2>From a business problem to a <span class="gradient-text">reliable ML solution.</span></h2>
+        <p class="section-intro">A machine-learning project does not begin by selecting an algorithm. It begins by understanding the decision that needs support, the data available, and the consequences of being wrong. This is the difference between simply training a model and building a useful system.</p>
+        <div class="deep-dive-grid">
+          <article class="detail-card"><span class="pill pill-blue">01 · DEFINE</span><h3>Translate the business need</h3><p>“We want AI” is not a problem statement. A useful statement identifies who needs help, what decision is difficult, when the output is needed and what improvement would count as success.</p><p><b>Example:</b> “Identify card transactions that should be reviewed within two seconds, while keeping the daily false-alert workload manageable.” This gives the team an outcome, a latency requirement and an operational constraint.</p></article>
+          <article class="detail-card"><span class="pill pill-purple">02 · CHECK DATA</span><h3>Ask whether the evidence is trustworthy</h3><p>Check completeness, correctness, representativeness, freshness, permissions and label quality. Historical data can reflect old business rules or human bias. A large dataset is not automatically a good dataset.</p><p><b>Example:</b> If fraud cases were historically under-reported, the label “not fraud” may include transactions that were never investigated.</p></article>
+          <article class="detail-card"><span class="pill pill-green">03 · BUILD & TEST</span><h3>Establish a baseline before complexity</h3><p>Start with a simple rule or baseline model. Split data appropriately, prevent leakage, compare candidate models and evaluate on examples that represent future use. A complex model should earn its place by delivering measurable improvement.</p><p><b>Example:</b> Compare a simple threshold-based fraud rule with a trained classifier. Measure recall, precision, review volume and response time.</p></article>
+          <article class="detail-card"><span class="pill pill-orange">04 · OPERATE</span><h3>Monitor after deployment</h3><p>Real-world data changes. Customer behaviour, fraud tactics, equipment and business processes evolve. Monitor prediction quality, input drift, latency, failures and fairness. Retraining should be controlled and validated, not automatic without checks.</p><p><b>Example:</b> A fraud model may become less effective after criminals change their tactics, even if its original test score was excellent.</p></article>
+        </div>
+        <h3 class="subheading">The end-to-end decision lifecycle</h3>
+        <div class="workflow lifecycle-workflow"><div class="workflow-step"><span>01</span><b>Business problem</b><small>Define the decision and success measure</small></div><div class="flow-arrow">→</div><div class="workflow-step"><span>02</span><b>Data assessment</b><small>Check quality, labels and permissions</small></div><div class="flow-arrow">→</div><div class="workflow-step"><span>03</span><b>Model development</b><small>Train, compare and validate</small></div><div class="flow-arrow">→</div><div class="workflow-step"><span>04</span><b>Deployment</b><small>Integrate with the real workflow</small></div><div class="flow-arrow">→</div><div class="workflow-step"><span>05</span><b>Monitoring</b><small>Detect drift and reassess quality</small></div></div>
+        <div class="insight-callout"><span>✦</span><p><strong>Practitioner mindset:</strong> model accuracy is only one part of success. A useful AI system must solve the right problem, use suitable data, fit the workflow, meet operational constraints and be monitored responsibly.</p></div>
       </section>
 
       <section class="content-section final-section" id="knowledge-check">
